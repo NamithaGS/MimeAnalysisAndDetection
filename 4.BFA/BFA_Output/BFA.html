@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+<style>
+
+    .bar {
+        fill: steelblue;
+    }
+
+    .bar:hover {
+        fill: brown;
+    }
+
+    .highlight {
+        fill:green;
+    }
+    .axis {
+        font: 10px sans-serif;
+    }
+
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+
+    .x.axis path {
+        display: none;
+    }
+
+    div.tooltip {
+        position: absolute;
+        text-align: center;
+        width: 100px;
+        height: 30px;
+        padding: 2px;
+        font: 12px sans-serif;
+        background: lightsteelblue;
+        border: 0px;
+        border-radius: 8px;
+        pointer-events: none;
+        color:darkred;
+    }
+    .dropdown-grp-mime{
+        left:42%;
+        top:10px;
+    }
+
+    h3{
+        text-align: center;
+    }
+
+    #expand{
+        left: 46%;
+        position: relative;
+        top: 23px;
+    }
+
+</style>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<h3>Byte Frequency Analysis</h3>
+<div class="btn-group dropdown-grp-mime">
+    <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Select Mime Type<span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="#" identi="0">Text/plain</a></li>
+        <li><a href="#" identi="1">Text/html</a></li>
+        <li><a href="#" identi="2">Image/gif</a></li>
+        <li><a href="#" identi="3">Image/jpeg</a></li>
+        <li><a href="#" identi="4">Image/png</a></li>
+        <li><a href="#" identi="5">Application/pdf</a></li>
+        <li><a href="#" identi="6">Application/octet-stream</a></li>
+        <li><a href="#" identi="7">Application/rtf</a></li>
+        <li><a href="#" identi="8">Application/gzip</a></li>
+        <li><a href="#" identi="9">Image/vnd-microsoft-icon</a></li>
+        <li><a href="#" identi="10">Application/Zip</a></li>
+        <li><a href="#" identi="11">Application/vnd-ms-excel</a></li>
+        <li><a href="#" identi="12">Application/ms-word</a></li>
+        <li><a href="#" identi="13">Audio/mpeg</a></li>
+        <li><a href="#" identi="14">Video/mp4</a></li>
+        <li><a href="#" identi="15">Image/tiff</a></li>
+        <li><a href="#" identi="16">Application/atom+xml</a></li>
+        <li><a href="#" identi="17">Application/java-vm</a></li>
+        <li><a href="#" identi="18">Application/postscript</a></li>
+        <li><a href="#" identi="19">Application/rdf+xml</a></li>
+        <li><a href="#" identi="20">Application/rss+xml</a></li>
+        <li><a href="#" identi="21">Application/vnd-ms-powerpoint</a></li>
+        <li><a href="#" identi="22">Audio/x-ms-wma</a></li>
+        <li><a href="#" identi="23">Image/vnd-microsoft-icon</a></li>
+        <li><a href="#" identi="24">Video/quicktime</a></li>
+    </ul>
+</div>
+<button id="expand">Expand Histogram</button>
+
+
+<script>
+
+    var id = 0;
+    $("#expand").hide();
+    function sample(i,xDim){
+        id = i;
+        $("#expand").show();
+        d3.select("svg").remove();
+        var attr_data = "[identi='"+ i.toString() +"']";
+        var textHeading = $(attr_data).text();
+        var files = ["text_plain.json","text_html.json","image_gif.json","image_jpg.json","image_png1.json","application_pdf.json","application_octetstream.json","application_rtf.json","application_gzip.json","image_vnd_microsoft_icon.json","application_zip.json","application_vnd_ms_excel.json","application_msword.json","audio_mpeg.json","video_mp4.json","image_tiff.json","application_atom+xml.json","application_java-vm.json","application_postscript.json","application_rdf+xml.json","application_rss+xml.json","application_vnd.ms-powerpoint.json","audio_x-ms-wma.json","image_vnd.microsoft.icon.json","video_quicktime.json"];
+
+        var margin = {top: 20, right: 20, bottom: 30, left: 40},
+                width = xDim - margin.left - margin.right,
+                height = 500 - margin.top - margin.bottom;
+
+        var x = d3.scale.ordinal()
+                .rangeRoundBands([0, width], .1);
+
+        var y = d3.scale.linear()
+                .range([height, 0]);
+
+        var xAxis = d3.svg.axis()
+                .scale(x)
+                .orient("bottom");
+
+        var yAxis = d3.svg.axis()
+                .scale(y)
+                .orient("left");
+
+        var svg = d3.select("body").append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        svg.append("text")
+                .attr("x",80)
+                .attr("y",20)
+                .style("font-size", "26px")
+                .style("fill","grey")
+                .style("font-family","sans-serif")
+                .text(textHeading);
+
+        var tip = d3.select("body").append("div")
+                .attr("class", "tooltip")
+                .style("opacity", 0);
+
+        d3.json(files[i], function(error, json) {
+            var data = json.fingerPrint;
+            if (error) throw error;
+
+            x.domain(data.map(function(d) { return d.byte; }));
+            //y.domain([0, d3.max(data, function(d) { return d.frequency; })]);
+            y.domain([0, 1]);
+
+            svg.append("g")
+                    .attr("class", "x axis")
+                    .attr("transform", "translate(0," + height + ")")
+                    .call(xAxis)
+                    .append("text")
+                    .attr("dx",".71em")
+                    .attr("y",25)
+                    .text("Bytes");
+
+            svg.append("g")
+                    .attr("class", "y axis")
+                    .call(yAxis)
+                    .append("text")
+                    .attr("transform", "rotate(-90)")
+                    .attr("y", 6)
+                    .attr("dy", ".71em")
+                    .style("text-anchor", "end")
+                    .text("Normalized Frequency");
+
+            svg.selectAll(".bar")
+                    .data(data)
+                    .enter().append("rect")
+                    .attr("class", "bar")
+                    .attr("x", function(d) { return x(d.byte); })
+                    .attr("width", x.rangeBand())
+                    .attr("y", function(d) { return y(d.frequency); })
+                    .attr("height", function(d) { return height - y(d.frequency); })
+                    .on("mouseout", function(d) {
+                        tip.transition()
+                                .duration(500)
+                                .style("opacity", 0);
+                    })
+                    .on("mouseover", function(d) {
+                        tip.transition()
+                                .duration(200)
+                                .style("opacity", .9);
+                        tip.html("Byte="+ d.byte +"<br/>Frequncy="+ d.frequency.toPrecision(3))
+                                .style("left", (d3.event.pageX) + "px")
+                                .style("top", (d3.event.pageY) + "px");
+                    });
+        });
+
+    }
+
+
+    $(document).ready(function() {
+        $("a").click(function () {
+            sample(parseInt($(this).attr("identi")),1250);
+        });
+        $("#expand").click(function(){
+            sample(id,6000);
+        });
+    });
+
+
+</script>
+</body>
+</html>

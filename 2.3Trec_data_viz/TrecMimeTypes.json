@@ -1,0 +1,565 @@
+{
+	"header": {
+		"title": {
+			"text": "MIME diversity of the TREC-DD-Polar dataset ",
+			"fontSize": 24,
+			"font": "open sans"
+		},
+		"subtitle": {
+			"color": "#999999",
+			"fontSize": 12,
+			"font": "open sans"
+		},
+		"titleSubtitlePadding": 9
+	},
+	"footer": {
+		"color": "#999999",
+		"fontSize": 10,
+		"font": "open sans",
+		"location": "bottom-left"
+	},
+	"size": {
+		"canvasHeight": 1800,
+		"canvasWidth": 2000,
+		"pieInnerRadius": "13%",
+		"pieOuterRadius": "92%"
+	},
+	"data": {
+		"sortOrder": "value-desc",
+		"smallSegmentGrouping": {
+			"enabled": true,
+			"value": 0.01
+		},
+		"content": [
+			{
+				"label": "application/x-bittorrent",
+				"value": 3,
+				"color": "#b80c86"
+			},
+			{
+				"label": "image/x-ms-bmp",
+				"value": 59,
+				"color": "#25d14f"
+			},
+			{
+				"label": "application/postscript",
+				"value": 219,
+				"color": "#89532f"
+			},
+			{
+				"label": "video/quicktime",
+				"value": 954,
+				"color": "#97aac5"
+			},
+			{
+				"label": "image/png",
+				"value": 37997,
+				"color": "#20cecd"
+			},
+			{
+				"label": "application/x-font-ttf",
+				"value": 9,
+				"color": "#918ddf"
+			},
+			{
+				"label": "image/vnd.microsoft.icon",
+				"value": 1570,
+				"color": "#b51686"
+			},
+			{
+				"label": "application/x-bzip2",
+				"value": 63,
+				"color": "#71714a"
+			},
+			{
+				"label": "audio/mp4",
+				"value": 18,
+				"color": "#90dd91"
+			},
+			{
+				"label": "application/x-sqlite3",
+				"value": 1,
+				"color": "#eb93e5"
+			},
+			{
+				"label": "application/gzip",
+				"value": 2060,
+				"color": "#758e17"
+			},
+			{
+				"label": "message/rfc822",
+				"value": 182,
+				"color": "#80ea37"
+			},
+			{
+				"label": "image/svg+xml",
+				"value": 342,
+				"color": "#fd60ba"
+			},
+			{
+				"label": "application/x-rpm",
+				"value": 3,
+				"color": "#89514c"
+			},
+			{
+				"label": "audio/x-wav",
+				"value": 59,
+				"color": "#50de12"
+			},
+			{
+				"label": "application/x-bibtex-text-file",
+				"value": 13,
+				"color": "#be7b41"
+			},
+			{
+				"label": "audio/vorbis",
+				"value": 5,
+				"color": "#641db7"
+			},
+			{
+				"label": "application/rtf",
+				"value": 53,
+				"color": "#aaaf17"
+			},
+			{
+				"label": "application/vnd.google-earth.kml+xml",
+				"value": 298,
+				"color": "#f85558"
+			},
+			{
+				"label": "application/x-stuffit",
+				"value": 1,
+				"color": "#dd009c"
+			},
+			{
+				"label": "text/html",
+				"value": 739588,
+				"color": "#aa4629"
+			},
+			{
+				"label": "text/x-python",
+				"value": 5,
+				"color": "#c52b21"
+			},
+			{
+				"label": "xscapplication/zip",
+				"value": 85,
+				"color": "#0ad3c2"
+			},
+			{
+				"label": "application/epub+zip",
+				"value": 36,
+				"color": "#6c815f"
+			},
+			{
+				"label": "video/x-flv",
+				"value": 13,
+				"color": "#6d2f04"
+			},
+			{
+				"label": "application/ogg",
+				"value": 26,
+				"color": "#59fb0d"
+			},
+			{
+				"label": "application/x-java-jnilib",
+				"value": 5,
+				"color": "#d528ff"
+			},
+			{
+				"label": "application/x-7z-compressed",
+				"value": 2,
+				"color": "#a42da3"
+			},
+			{
+				"label": "application/fits",
+				"value": 24,
+				"color": "#54211a"
+			},
+			{
+				"label": "application/x-msdownload; format=pe",
+				"value": 1,
+				"color": "#c0ce3b"
+			},
+			{
+				"label": "video/x-m4v",
+				"value": 203,
+				"color": "#384af1"
+			},
+			{
+				"label": "application/x-shockwave-flash",
+				"value": 141,
+				"color": "#788986"
+			},
+			{
+				"label": "application/x-xz",
+				"value": 11,
+				"color": "#7dc062"
+			},
+			{
+				"label": "application/xslt+xml",
+				"value": 7,
+				"color": "#170c6c"
+			},
+			{
+				"label": "application/xml",
+				"value": 21000,
+				"color": "#c5baf5"
+			},
+			{
+				"label": "text/x-php",
+				"value": 25,
+				"color": "#14f35a"
+			},
+			{
+				"label": "video/x-ms-asf",
+				"value": 26,
+				"color": "#992788"
+			},
+			{
+				"label": "application/x-gtar",
+				"value": 46,
+				"color": "#2dbd04"
+			},
+			{
+				"label": "application/octet-stream",
+				"value": 211687,
+				"color": "#663460"
+			},
+			{
+				"label": "text/plain",
+				"value": 137335,
+				"color": "#6a5737"
+			},
+			{
+				"label": "application/x-matroska",
+				"value": 66,
+				"color": "#e5e2f8"
+			},
+			{
+				"label": "application/atom+xml",
+				"value": 2984,
+				"color": "#04a65a"
+			},
+			{
+				"label": "application/x-tex",
+				"value": 17,
+				"color": "#02a1b1"
+			},
+			{
+				"label": "application/vnd.oasis.opendocument.presentation",
+				"value": 1,
+				"color": "#8fa5e9"
+			},
+			{
+				"label": "video/mp4",
+				"value": 675,
+				"color": "#660259"
+			},
+			{
+				"label": "application/x-lha",
+				"value": 2,
+				"color": "#e0136f"
+			},
+			{
+				"label": "application/zip",
+				"value": 3762,
+				"color": "#341252"
+			},
+			{
+				"label": "text/x-jsp",
+				"value": 3,
+				"color": "#93b607"
+			},
+			{
+				"label": "application/vnd.sun.xml.writer",
+				"value": 1,
+				"color": "#7882fc"
+			},
+			{
+				"label": "application/x-sh",
+				"value": 5680,
+				"color": "#2f5f2f"
+			},
+			{
+				"label": "application/pdf",
+				"value": 44658,
+				"color": "#1342b5"
+			},
+			{
+				"label": "image/x-bpg",
+				"value": 7,
+				"color": "#ab2d6a"
+			},
+			{
+				"label": "application/dita+xml; format=concept",
+				"value": 345,
+				"color": "#3c4aec"
+			},
+			{
+				"label": "text/x-vcard",
+				"value": 19,
+				"color": "#ff1697"
+			},
+			{
+				"label": "application/x-tika-msoffice",
+				"value": 2809,
+				"color": "#4268ba"
+			},
+			{
+				"label": "application/x-msdownload",
+				"value": 72,
+				"color": "#a954a3"
+			},
+			{
+				"label": "image/gif",
+				"value": 40049,
+				"color": "#5e13fe"
+			},
+			{
+				"label": "image/vnd.dwg",
+				"value": 3,
+				"color": "#b804ca"
+			},
+			{
+				"label": "image/tiff",
+				"value": 477,
+				"color": "#870cf8"
+			},
+			{
+				"label": "text/x-diff",
+				"value": 1,
+				"color": "#2058d0"
+			},
+			{
+				"label": "application/java-vm",
+				"value": 1,
+				"color": "#3ca242"
+			},
+			{
+				"label": "application/x-elc",
+				"value": 324,
+				"color": "#9182c1"
+			},
+			{
+				"label": "application/vnd.oasis.opendocument.text",
+				"value": 10,
+				"color": "#73560b"
+			},
+			{
+				"label": "application/x-msdownload; format=pe32",
+				"value": 16,
+				"color": "#05a75b"
+			},
+			{
+				"label": "application/xhtml+xml",
+				"value": 385751,
+				"color": "#b28f8b"
+			},
+			{
+				"label": "video/x-ms-wmv",
+				"value": 139,
+				"color": "#3b9baa"
+			},
+			{
+				"label": "application/x-msmetafile",
+				"value": 6,
+				"color": "#17c186"
+			},
+			{
+				"label": "video/mpeg",
+				"value": 255,
+				"color": "#241699"
+			},
+			{
+				"label": "audio/x-aiff",
+				"value": 10,
+				"color": "#527072"
+			},
+			{
+				"label": "application/x-rar-compressed",
+				"value": 1,
+				"color": "#09c7fa"
+			},
+			{
+				"label": "image/jpeg",
+				"value": 85879,
+				"color": "#105274"
+			},
+			{
+				"label": "image/x-xcf",
+				"value": 1,
+				"color": "#cc1aac"
+			},
+			{
+				"label": "application/vnd.ms-htmlhelp",
+				"value": 1,
+				"color": "#e8bd3a"
+			},
+			{
+				"label": "message/x-emlx",
+				"value": 1,
+				"color": "#79f415"
+			},
+			{
+				"label": "audio/x-ms-wma",
+				"value": 55,
+				"color": "#05901a"
+			},
+			{
+				"label": "application/vnd.ms-excel.sheet.4",
+				"value": 1,
+				"color": "#006173"
+			},
+			{
+				"label": "application/x-tika-ooxml",
+				"value": 1775,
+				"color": "#504392"
+			},
+			{
+				"label": "audio/x-mpegurl",
+				"value": 1,
+				"color": "#acbae7"
+			},
+			{
+				"label": "text/troff",
+				"value": 2,
+				"color": "#d25a9b"
+			},
+			{
+				"label": "application/vnd.ms-excel",
+				"value": 227,
+				"color": "#f72b36"
+			},
+			{
+				"label": "application/x-compress",
+				"value": 44,
+				"color": "#30ca40"
+			},
+			{
+				"label": "application/x-bzip",
+				"value": 6,
+				"color": "#33f32e"
+			},
+			{
+				"label": "image/vnd.adobe.photoshop",
+				"value": 4,
+				"color": "#6a97f2"
+			},
+			{
+				"label": "application/x-hdf",
+				"value": 41,
+				"color": "#c58151"
+			},
+			{
+				"label": "audio/mpeg",
+				"value": 646,
+				"color": "#124b22"
+			},
+			{
+				"label": "application/x-executable",
+				"value": 35,
+				"color": "#2414cb"
+			},
+			{
+				"label": "application/x-debian-package",
+				"value": 4,
+				"color": "#cda14c"
+			},
+			{
+				"label": "text/x-perl",
+				"value": 14,
+				"color": "#46a7a2"
+			},
+			{
+				"label": "application/rdf+xml",
+				"value": 1042,
+				"color": "#da9898"
+			},
+			{
+				"label": "application/x-tar",
+				"value": 37,
+				"color": "#91bb6a"
+			},
+			{
+				"label": "audio/basic",
+				"value": 54,
+				"color": "#885451"
+			},
+			{
+				"label": "application/rss+xml",
+				"value": 8894,
+				"color": "#a27103"
+			},
+			{
+				"label": "application/vnd.rn-realmedia",
+				"value": 105,
+				"color": "#dc5686"
+			},
+			{
+				"label": "video/x-msvideo",
+				"value": 96,
+				"color": "#87eb3c"
+			},
+			{
+				"label": "audio/x-flac",
+				"value": 2,
+				"color": "#aafd02"
+			},
+			{
+				"label": "application/msword",
+				"value": 244,
+				"color": "#4eb430"
+			}
+		]
+	},
+	"labels": {
+		"outer": {
+			"format": "label-value1",
+			"pieDistance": 300
+		},
+		"inner": {
+			"hideWhenLessThanPercentage": 2
+		},
+		"mainLabel": {
+			"fontSize": 11
+		},
+		"percentage": {
+			"color": "#ffffff",
+			"decimalPlaces": 0
+		},
+		"value": {
+			"color": "#adadad",
+			"fontSize": 11
+		},
+		"lines": {
+			"enabled": true
+		},
+		"truncation": {
+			"enabled": true
+		}
+	},
+	"tooltips": {
+		"enabled": true,
+		"type": "placeholder",
+		"string": "{label}: {value}",
+		"styles": {
+			"borderRadius": 4,
+			"font": "verdana",
+			"fontSize": 14
+		}
+	},
+	"effects": {
+		"pullOutSegmentOnClick": {
+			"effect": "linear",
+			"speed": 400,
+			"size": 25
+		}
+	},
+	"misc": {
+		"gradient": {
+			"enabled": true,
+			"percentage": 100
+		}
+	}
+}

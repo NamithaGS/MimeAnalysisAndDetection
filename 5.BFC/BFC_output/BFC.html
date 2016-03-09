@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+<style>
+
+    div.tooltip {
+        position: absolute;
+        text-align: center;
+        width: 100px;
+        height: 30px;
+        padding: 2px;
+        font: 12px sans-serif;
+        background: lightsteelblue;
+        border: 0px;
+        border-radius: 8px;
+        pointer-events: none;
+        color:darkred;
+    }
+    .dropdown-grp-mime{
+        left:42%;
+        top:10px;
+    }
+
+    h3{
+        text-align: center;
+    }
+
+    #expand{
+        left: 41%;
+        position: relative;
+        top: 23px;
+		bottom:10px;
+    }
+	
+	body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+
+}
+
+.dot {
+  stroke: #000;
+}
+
+.line {
+  fill: none;
+  stroke-width: 1.5px;
+}
+
+</style>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<h3>Byte Frequency Distribution Correlation</h3>
+<div class="btn-group dropdown-grp-mime">
+    <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Select Mime Type<span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="#" identi="0">Text/plain</a></li>
+        <li><a href="#" identi="1">Text/html</a></li>
+        <li><a href="#" identi="2">Image/gif</a></li>
+        <li><a href="#" identi="3">Image/jpeg</a></li>
+        <li><a href="#" identi="4">Audio/mpeg</a></li>
+        <li><a href="#" identi="5">Application/pdf</a></li>
+		<li><a href="#" identi="6">Application/msword</a></li>
+		<li><a href="#" identi="7">Application/vnd-ms-excel</a></li>
+		<li><a href="#" identi="8">Application/Zip</a></li>
+		<li><a href="#" identi="9">Image/tiff</a></li>
+        <li><a href="#" identi="10">Application/octet-stream</a></li>
+        <li><a href="#" identi="11">Audio/x-ms-wma</a></li>
+        <li><a href="#" identi="12">Video/quicktime</a></li>
+		<li><a href="#" identi="13">Application/java-vm</a></li>
+		<li><a href="#" identi="14">Application/vnd-ms-powerpoint</a></li>
+		<li><a href="#" identi="15">Application/postscript</a></li> 
+		<li><a href="#" identi="16">Application/atom+xml</a></li>
+		<li><a href="#" identi="17">Application/rdf+xml</a></li>
+		<li><a href="#" identi="18">Application/rss+xml</a></li>
+
+    </ul>
+</div>
+
+<div id="expand">
+<button id="hist" class="col-md-2 btn btn-secondary">Expand Histogram</button>
+<div class="col-md-offset-1 col-md-4">
+<span class="label label-danger">Correlation strength</span>       <span class="label label-primary">Min-max Correlation strengths</span>
+</div></div>
+
+<script>
+
+    var id = 0;
+    $("#expand").hide();
+    function sample(i,xDim){
+        id = i;
+        $("#expand").show();
+        d3.select("svg").remove();
+        var attr_data = "[identi='"+ i.toString() +"']";
+        var textHeading = $(attr_data).text();
+		var files = ["text_plain-correlation.json","text_html-correlation.json","image_gif-correlation.json","image_jpeg-correlation.json","audio_mpeg-correlation.json","application_pdf-correlation.json","application_msword-correlation.json","application_vnd.ms-excel-correlation.json","application_zip-correlation.json","image_tiff-correlation.json","application_octet-stream-correlation.json","audio_x-ms-wma-correlation.json","video_quicktime-correlation.json","application_java-vm-correlation.json","application_vnd.ms-powerpoint-correlation.json","application_postscript-correlation.json","application_atom+xml-correlation.json","application_rdf+xml-correlation.json","application_rss+xml-correlation.json"];
+
+        var margin = {top: 40, right: 20, bottom: 40, left: 30},
+                width = xDim - margin.left - margin.right,
+                height = 400 - margin.top - margin.bottom;
+
+  var x = d3.scale.ordinal()
+                .rangeRoundBands([0, width], .1);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+				
+				
+
+var line = d3.svg.line()
+    .x(function(d) { return x(d.byte); })
+    .y(function(d) { return y(d.yvalue); });
+	
+
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+	
+var data = [];				
+var data2 = [];	
+var minmaxdata =[];				
+
+   
+        var tip = d3.select("body").append("div")
+                .attr("class", "tooltip")
+                .style("opacity", 0);
+
+        d3.json(files[i], function(error, json) {
+		  $.each(json.correlation, function(d,i){
+      
+                   data.push({
+               
+                     byte: i.byte,
+               
+                     yvalue: i.frequency,
+
+                   })
+               	
+               	    data2.push({
+               
+                     byte: i.byte,
+               	  
+               	     yvalue: i.strength
+               
+                   })
+               
+                 })
+            $.each(json.minmax, function(d,i){
+               
+                   minmaxdata.push({
+               
+                     byte1: i.byte,
+               
+                     yvalue1: i.value,
+               	  
+               
+                   })
+              
+                 })
+			x.domain(data.map(function(d) { return d.byte; }));
+            y.domain([0, 1]);
+					
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis)
+	 .append("text")
+      .attr("y", 25)
+	  .attr("x", 30)
+      .attr("dx", ".71em")
+      .style("text-anchor", "end")
+      .text("Bytes");
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      
+
+
+  svg.append("path")
+      .datum(data2)
+      .attr("class", "line")
+	  .attr('stroke', 'red')
+      .attr('stroke-width', 2)
+      .attr("d", line);
+        
+   svg.selectAll(".dot")
+      .data(minmaxdata)
+      .enter().append("circle")
+	  .attr("cx", function(d) { return x(d.byte1); })
+      .attr("cy", function(d) { return y(d.yvalue1); })
+      .attr("r", 8)
+      .style("fill", "blue");	
+		
+    });
+	}
+function type(d) {
+  d.byte = d.byte;
+  d.yvalue = +d.yvalue;
+  return d;
+}
+
+
+ $(document).ready(function() {
+        $("a").click(function () {
+            sample(parseInt($(this).attr("identi")),1250);
+        });
+        $("#hist").click(function(){
+            sample(id,6000);
+        });
+    });
+
+
+</script>
+</body>
+</html>

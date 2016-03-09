@@ -1,0 +1,1302 @@
+{
+    "minmax": [
+        {
+            "byte": 0, 
+            "value": 1.0
+        }, 
+        {
+            "byte": 1, 
+            "value": 1.0
+        }, 
+        {
+            "byte": 38, 
+            "value": 0.4297278414720629
+        }, 
+        {
+            "byte": 59, 
+            "value": 0.42974267167404606
+        }
+    ], 
+    "correlation": [
+        {
+            "byte": "0", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "1", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "2", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "3", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "4", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "5", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "6", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "7", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "8", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "9", 
+            "frequency": 0.012505048629910033, 
+            "strength": 0.9774682147622092
+        }, 
+        {
+            "byte": "10", 
+            "frequency": 0.18042261744040577, 
+            "strength": 0.9603420923678773
+        }, 
+        {
+            "byte": "11", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "12", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "13", 
+            "frequency": 0, 
+            "strength": 0.9847130651015601
+        }, 
+        {
+            "byte": "14", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "15", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "16", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "17", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "18", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "19", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "20", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "21", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "22", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "23", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "24", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "25", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "26", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "27", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "28", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "29", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "30", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "31", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "32", 
+            "frequency": 1.0, 
+            "strength": 0.9983349643300612
+        }, 
+        {
+            "byte": "33", 
+            "frequency": 0.027962138798419446, 
+            "strength": 0.9982463043817386
+        }, 
+        {
+            "byte": "34", 
+            "frequency": 0.11786188002559683, 
+            "strength": 0.8656639963303631
+        }, 
+        {
+            "byte": "35", 
+            "frequency": 0.13555149702337757, 
+            "strength": 0.7940707847614926
+        }, 
+        {
+            "byte": "36", 
+            "frequency": 0, 
+            "strength": 0.9912614186143767
+        }, 
+        {
+            "byte": "37", 
+            "frequency": 0.013506996265237901, 
+            "strength": 0.7480507888751972
+        }, 
+        {
+            "byte": "38", 
+            "frequency": 0.7199368386032882, 
+            "strength": 0.4297278414720629
+        }, 
+        {
+            "byte": "39", 
+            "frequency": 0.023394803789035117, 
+            "strength": 0.9811103070397464
+        }, 
+        {
+            "byte": "40", 
+            "frequency": 0.03887977621615994, 
+            "strength": 0.9915058092378622
+        }, 
+        {
+            "byte": "41", 
+            "frequency": 0.03887977621615994, 
+            "strength": 0.9914921502909605
+        }, 
+        {
+            "byte": "42", 
+            "frequency": 0, 
+            "strength": 0.99752461454388
+        }, 
+        {
+            "byte": "43", 
+            "frequency": 0.016143948362385148, 
+            "strength": 0.9031501221389551
+        }, 
+        {
+            "byte": "44", 
+            "frequency": 0.06656320431263121, 
+            "strength": 0.9557777143534608
+        }, 
+        {
+            "byte": "45", 
+            "frequency": 0.06675869138350318, 
+            "strength": 0.9513976991752081
+        }, 
+        {
+            "byte": "46", 
+            "frequency": 0.1074512873102131, 
+            "strength": 0.9611297963850982
+        }, 
+        {
+            "byte": "47", 
+            "frequency": 0.08465957943435784, 
+            "strength": 0.9364243117249083
+        }, 
+        {
+            "byte": "48", 
+            "frequency": 0.07537685386281656, 
+            "strength": 0.9681784425736308
+        }, 
+        {
+            "byte": "49", 
+            "frequency": 0.053543419352904034, 
+            "strength": 0.9609242220259937
+        }, 
+        {
+            "byte": "50", 
+            "frequency": 0.05592427759683889, 
+            "strength": 0.8899080887340055
+        }, 
+        {
+            "byte": "51", 
+            "frequency": 0.028424354224059513, 
+            "strength": 0.9050178664441164
+        }, 
+        {
+            "byte": "52", 
+            "frequency": 0.1348768675391358, 
+            "strength": 0.8892971332901525
+        }, 
+        {
+            "byte": "53", 
+            "frequency": 0.03854314844101271, 
+            "strength": 0.9482440843851259
+        }, 
+        {
+            "byte": "54", 
+            "frequency": 0.02652721405583079, 
+            "strength": 0.973593167585209
+        }, 
+        {
+            "byte": "55", 
+            "frequency": 0.1365094700524696, 
+            "strength": 0.9782347717818327
+        }, 
+        {
+            "byte": "56", 
+            "frequency": 0.02652721405583079, 
+            "strength": 0.9846293114203425
+        }, 
+        {
+            "byte": "57", 
+            "frequency": 0.022252897127834393, 
+            "strength": 0.9748968903529895
+        }, 
+        {
+            "byte": "58", 
+            "frequency": 0.16312579108486572, 
+            "strength": 0.7902647880735578
+        }, 
+        {
+            "byte": "59", 
+            "frequency": 0.7204977414892789, 
+            "strength": 0.42974267167404606
+        }, 
+        {
+            "byte": "60", 
+            "frequency": 0.17244578435494315, 
+            "strength": 0.9510066099985528
+        }, 
+        {
+            "byte": "61", 
+            "frequency": 0.12834185109919924, 
+            "strength": 0.833292963000773
+        }, 
+        {
+            "byte": "62", 
+            "frequency": 0.17221893165727553, 
+            "strength": 0.9588424494929203
+        }, 
+        {
+            "byte": "63", 
+            "frequency": 0.027013992530475803, 
+            "strength": 0.9811540207440159
+        }, 
+        {
+            "byte": "64", 
+            "frequency": 0.011415495362167996, 
+            "strength": 0.9973499487928812
+        }, 
+        {
+            "byte": "65", 
+            "frequency": 0.07842702864424769, 
+            "strength": 0.9308932141724513
+        }, 
+        {
+            "byte": "66", 
+            "frequency": 0.045375696611138966, 
+            "strength": 0.9768894992090467
+        }, 
+        {
+            "byte": "67", 
+            "frequency": 0.13971745577299607, 
+            "strength": 0.9813905763694093
+        }, 
+        {
+            "byte": "68", 
+            "frequency": 0.08753534040937024, 
+            "strength": 0.9641891633635136
+        }, 
+        {
+            "byte": "69", 
+            "frequency": 0.07128974568746534, 
+            "strength": 0.929145759857379
+        }, 
+        {
+            "byte": "70", 
+            "frequency": 0.03188174349116899, 
+            "strength": 0.9803061919240391
+        }, 
+        {
+            "byte": "71", 
+            "frequency": 0.04789069016834849, 
+            "strength": 0.9670745682240951
+        }, 
+        {
+            "byte": "72", 
+            "frequency": 0.04209826679741144, 
+            "strength": 0.9810772948050067
+        }, 
+        {
+            "byte": "73", 
+            "frequency": 0.08857129765727426, 
+            "strength": 0.9723182506819172
+        }, 
+        {
+            "byte": "74", 
+            "frequency": 0.020420658901312977, 
+            "strength": 0.9890563183772014
+        }, 
+        {
+            "byte": "75", 
+            "frequency": 0.045087594037311336, 
+            "strength": 0.9815524732847988
+        }, 
+        {
+            "byte": "76", 
+            "frequency": 0.06962516411706948, 
+            "strength": 0.9811577874836841
+        }, 
+        {
+            "byte": "77", 
+            "frequency": 0.07826069329550381, 
+            "strength": 0.9707539237274206
+        }, 
+        {
+            "byte": "78", 
+            "frequency": 0.06887243752647293, 
+            "strength": 0.9536729288631354
+        }, 
+        {
+            "byte": "79", 
+            "frequency": 0.05730533191566655, 
+            "strength": 0.9463909269537583
+        }, 
+        {
+            "byte": "80", 
+            "frequency": 0.053543419352904034, 
+            "strength": 0.9387678278297504
+        }, 
+        {
+            "byte": "81", 
+            "frequency": 0.01910177730522218, 
+            "strength": 0.9896957370402617
+        }, 
+        {
+            "byte": "82", 
+            "frequency": 0.07990846753517597, 
+            "strength": 0.9666197219518622
+        }, 
+        {
+            "byte": "83", 
+            "frequency": 0.10996861365384858, 
+            "strength": 0.9711333503143089
+        }, 
+        {
+            "byte": "84", 
+            "frequency": 0.08341907896291147, 
+            "strength": 0.9514337310757126
+        }, 
+        {
+            "byte": "85", 
+            "frequency": 0.03820355461044436, 
+            "strength": 0.9827145275561504
+        }, 
+        {
+            "byte": "86", 
+            "frequency": 0.0395444359216837, 
+            "strength": 0.9880068271389018
+        }, 
+        {
+            "byte": "87", 
+            "frequency": 0.03854314844101271, 
+            "strength": 0.9880732141355548
+        }, 
+        {
+            "byte": "88", 
+            "frequency": 0.015315494175984731, 
+            "strength": 0.9907934992149957
+        }, 
+        {
+            "byte": "89", 
+            "frequency": 0.029326938585544204, 
+            "strength": 0.9839019698149682
+        }, 
+        {
+            "byte": "90", 
+            "frequency": 0.007219793192707919, 
+            "strength": 0.9850640015121844
+        }, 
+        {
+            "byte": "91", 
+            "frequency": 0.012505048629910033, 
+            "strength": 0.9970175422956578
+        }, 
+        {
+            "byte": "92", 
+            "frequency": 0, 
+            "strength": 0.9823654758326393
+        }, 
+        {
+            "byte": "93", 
+            "frequency": 0.012505048629910033, 
+            "strength": 0.9969893326439717
+        }, 
+        {
+            "byte": "94", 
+            "frequency": 0, 
+            "strength": 0.999959553895127
+        }, 
+        {
+            "byte": "95", 
+            "frequency": 0.08152294310528557, 
+            "strength": 0.981731615569979
+        }, 
+        {
+            "byte": "96", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "97", 
+            "frequency": 0.23577903587797086, 
+            "strength": 0.9472124614872509
+        }, 
+        {
+            "byte": "98", 
+            "frequency": 0.688743296004153, 
+            "strength": 0.43119050525753516
+        }, 
+        {
+            "byte": "99", 
+            "frequency": 0.18819994325197856, 
+            "strength": 0.9436479075986545
+        }, 
+        {
+            "byte": "100", 
+            "frequency": 0.21092425330378678, 
+            "strength": 0.9441716315816784
+        }, 
+        {
+            "byte": "101", 
+            "frequency": 0.2624074533197714, 
+            "strength": 0.9283774012466107
+        }, 
+        {
+            "byte": "102", 
+            "frequency": 0.07925346904917997, 
+            "strength": 0.9452025467352444
+        }, 
+        {
+            "byte": "103", 
+            "frequency": 0.2538760998918087, 
+            "strength": 0.7410034727458875
+        }, 
+        {
+            "byte": "104", 
+            "frequency": 0.1251546516535211, 
+            "strength": 0.9589477936227842
+        }, 
+        {
+            "byte": "105", 
+            "frequency": 0.21030552432837482, 
+            "strength": 0.9461035534479345
+        }, 
+        {
+            "byte": "106", 
+            "frequency": 0.037860914912353466, 
+            "strength": 0.9807640697005836
+        }, 
+        {
+            "byte": "107", 
+            "frequency": 0.06062047235922653, 
+            "strength": 0.9706000529632378
+        }, 
+        {
+            "byte": "108", 
+            "frequency": 0.22561131736340936, 
+            "strength": 0.8872794054490528
+        }, 
+        {
+            "byte": "109", 
+            "frequency": 0.16931915886871568, 
+            "strength": 0.9151730538206037
+        }, 
+        {
+            "byte": "110", 
+            "frequency": 0.6943211713789189, 
+            "strength": 0.45548643955126394
+        }, 
+        {
+            "byte": "111", 
+            "frequency": 0.21904666934858108, 
+            "strength": 0.9539852516633243
+        }, 
+        {
+            "byte": "112", 
+            "frequency": 0.6793131000419911, 
+            "strength": 0.4478552834314895
+        }, 
+        {
+            "byte": "113", 
+            "frequency": 0.05865387717108841, 
+            "strength": 0.9639256702781983
+        }, 
+        {
+            "byte": "114", 
+            "frequency": 0.27018816027082493, 
+            "strength": 0.9121502218625575
+        }, 
+        {
+            "byte": "115", 
+            "frequency": 0.6929497178174506, 
+            "strength": 0.4467123206517996
+        }, 
+        {
+            "byte": "116", 
+            "frequency": 0.33948385792440516, 
+            "strength": 0.7880694706322635
+        }, 
+        {
+            "byte": "117", 
+            "frequency": 0.11415495362167995, 
+            "strength": 0.9570684441968001
+        }, 
+        {
+            "byte": "118", 
+            "frequency": 0.09017518807462267, 
+            "strength": 0.9678665783380855
+        }, 
+        {
+            "byte": "119", 
+            "frequency": 0.08738634397725763, 
+            "strength": 0.9693795276314066
+        }, 
+        {
+            "byte": "120", 
+            "frequency": 0.05931665388252555, 
+            "strength": 0.9800177677724965
+        }, 
+        {
+            "byte": "121", 
+            "frequency": 0.09964884002592474, 
+            "strength": 0.9707682095375616
+        }, 
+        {
+            "byte": "122", 
+            "frequency": 0.01910177730522218, 
+            "strength": 0.9876082632100607
+        }, 
+        {
+            "byte": "123", 
+            "frequency": 0.023394803789035117, 
+            "strength": 0.9961389150323487
+        }, 
+        {
+            "byte": "124", 
+            "frequency": 0.013506996265237901, 
+            "strength": 0.9971339494701967
+        }, 
+        {
+            "byte": "125", 
+            "frequency": 0.023394803789035117, 
+            "strength": 0.9961388991553481
+        }, 
+        {
+            "byte": "126", 
+            "frequency": 0, 
+            "strength": 0.9997716396992743
+        }, 
+        {
+            "byte": "127", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "128", 
+            "frequency": 0, 
+            "strength": 0.9942560387166958
+        }, 
+        {
+            "byte": "129", 
+            "frequency": 0, 
+            "strength": 0.9962153533904208
+        }, 
+        {
+            "byte": "130", 
+            "frequency": 0, 
+            "strength": 0.9971262177511911
+        }, 
+        {
+            "byte": "131", 
+            "frequency": 0, 
+            "strength": 0.9974423716024552
+        }, 
+        {
+            "byte": "132", 
+            "frequency": 0, 
+            "strength": 0.9972207385625131
+        }, 
+        {
+            "byte": "133", 
+            "frequency": 0, 
+            "strength": 0.9983376676453116
+        }, 
+        {
+            "byte": "134", 
+            "frequency": 0, 
+            "strength": 0.9987908294487828
+        }, 
+        {
+            "byte": "135", 
+            "frequency": 0, 
+            "strength": 0.9985470598777311
+        }, 
+        {
+            "byte": "136", 
+            "frequency": 0, 
+            "strength": 0.9973665038189579
+        }, 
+        {
+            "byte": "137", 
+            "frequency": 0, 
+            "strength": 0.9981233960731651
+        }, 
+        {
+            "byte": "138", 
+            "frequency": 0, 
+            "strength": 0.998558350309376
+        }, 
+        {
+            "byte": "139", 
+            "frequency": 0, 
+            "strength": 0.9979355539885397
+        }, 
+        {
+            "byte": "140", 
+            "frequency": 0, 
+            "strength": 0.9978036303071717
+        }, 
+        {
+            "byte": "141", 
+            "frequency": 0, 
+            "strength": 0.9985191451287451
+        }, 
+        {
+            "byte": "142", 
+            "frequency": 0, 
+            "strength": 0.999397852675866
+        }, 
+        {
+            "byte": "143", 
+            "frequency": 0, 
+            "strength": 0.9986833565123621
+        }, 
+        {
+            "byte": "144", 
+            "frequency": 0, 
+            "strength": 0.9989777139702989
+        }, 
+        {
+            "byte": "145", 
+            "frequency": 0, 
+            "strength": 0.9989436288539877
+        }, 
+        {
+            "byte": "146", 
+            "frequency": 0, 
+            "strength": 0.9993185783859336
+        }, 
+        {
+            "byte": "147", 
+            "frequency": 0, 
+            "strength": 0.9985525091854516
+        }, 
+        {
+            "byte": "148", 
+            "frequency": 0, 
+            "strength": 0.9984372199219204
+        }, 
+        {
+            "byte": "149", 
+            "frequency": 0, 
+            "strength": 0.9984814861218164
+        }, 
+        {
+            "byte": "150", 
+            "frequency": 0, 
+            "strength": 0.999027648921312
+        }, 
+        {
+            "byte": "151", 
+            "frequency": 0, 
+            "strength": 0.9986769298157459
+        }, 
+        {
+            "byte": "152", 
+            "frequency": 0, 
+            "strength": 0.9985146304663948
+        }, 
+        {
+            "byte": "153", 
+            "frequency": 0, 
+            "strength": 0.9977887429833802
+        }, 
+        {
+            "byte": "154", 
+            "frequency": 0, 
+            "strength": 0.9987444058656643
+        }, 
+        {
+            "byte": "155", 
+            "frequency": 0, 
+            "strength": 0.9989318362289176
+        }, 
+        {
+            "byte": "156", 
+            "frequency": 0, 
+            "strength": 0.9981703694175055
+        }, 
+        {
+            "byte": "157", 
+            "frequency": 0, 
+            "strength": 0.9988566059068028
+        }, 
+        {
+            "byte": "158", 
+            "frequency": 0, 
+            "strength": 0.9989543580629727
+        }, 
+        {
+            "byte": "159", 
+            "frequency": 0, 
+            "strength": 0.9988631378875613
+        }, 
+        {
+            "byte": "160", 
+            "frequency": 0, 
+            "strength": 0.997546712586296
+        }, 
+        {
+            "byte": "161", 
+            "frequency": 0, 
+            "strength": 0.9979067659577018
+        }, 
+        {
+            "byte": "162", 
+            "frequency": 0, 
+            "strength": 0.9980301298790838
+        }, 
+        {
+            "byte": "163", 
+            "frequency": 0, 
+            "strength": 0.9986475361345096
+        }, 
+        {
+            "byte": "164", 
+            "frequency": 0, 
+            "strength": 0.9981829930721823
+        }, 
+        {
+            "byte": "165", 
+            "frequency": 0, 
+            "strength": 0.9981572119441557
+        }, 
+        {
+            "byte": "166", 
+            "frequency": 0, 
+            "strength": 0.998993748021059
+        }, 
+        {
+            "byte": "167", 
+            "frequency": 0, 
+            "strength": 0.9982112517626732
+        }, 
+        {
+            "byte": "168", 
+            "frequency": 0, 
+            "strength": 0.9985280329822049
+        }, 
+        {
+            "byte": "169", 
+            "frequency": 0, 
+            "strength": 0.9976747277835798
+        }, 
+        {
+            "byte": "170", 
+            "frequency": 0, 
+            "strength": 0.9989348009471742
+        }, 
+        {
+            "byte": "171", 
+            "frequency": 0, 
+            "strength": 0.9985688756312843
+        }, 
+        {
+            "byte": "172", 
+            "frequency": 0, 
+            "strength": 0.9989860281639622
+        }, 
+        {
+            "byte": "173", 
+            "frequency": 0, 
+            "strength": 0.9979880344478589
+        }, 
+        {
+            "byte": "174", 
+            "frequency": 0, 
+            "strength": 0.9984900715051536
+        }, 
+        {
+            "byte": "175", 
+            "frequency": 0, 
+            "strength": 0.9987486645990749
+        }, 
+        {
+            "byte": "176", 
+            "frequency": 0, 
+            "strength": 0.9972764776988332
+        }, 
+        {
+            "byte": "177", 
+            "frequency": 0, 
+            "strength": 0.9974509526560089
+        }, 
+        {
+            "byte": "178", 
+            "frequency": 0, 
+            "strength": 0.9982495876233851
+        }, 
+        {
+            "byte": "179", 
+            "frequency": 0, 
+            "strength": 0.9978241069016338
+        }, 
+        {
+            "byte": "180", 
+            "frequency": 0, 
+            "strength": 0.9979897519949442
+        }, 
+        {
+            "byte": "181", 
+            "frequency": 0, 
+            "strength": 0.996974995671228
+        }, 
+        {
+            "byte": "182", 
+            "frequency": 0, 
+            "strength": 0.9991645724162018
+        }, 
+        {
+            "byte": "183", 
+            "frequency": 0, 
+            "strength": 0.9980189930927296
+        }, 
+        {
+            "byte": "184", 
+            "frequency": 0, 
+            "strength": 0.9963045328237878
+        }, 
+        {
+            "byte": "185", 
+            "frequency": 0, 
+            "strength": 0.9970321711251227
+        }, 
+        {
+            "byte": "186", 
+            "frequency": 0, 
+            "strength": 0.9976403942571049
+        }, 
+        {
+            "byte": "187", 
+            "frequency": 0, 
+            "strength": 0.9979486868538908
+        }, 
+        {
+            "byte": "188", 
+            "frequency": 0, 
+            "strength": 0.9975378907146903
+        }, 
+        {
+            "byte": "189", 
+            "frequency": 0, 
+            "strength": 0.9973516491337848
+        }, 
+        {
+            "byte": "190", 
+            "frequency": 0, 
+            "strength": 0.9982875741475332
+        }, 
+        {
+            "byte": "191", 
+            "frequency": 0, 
+            "strength": 0.9979185969246515
+        }, 
+        {
+            "byte": "192", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "193", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "194", 
+            "frequency": 0, 
+            "strength": 0.9984272523189158
+        }, 
+        {
+            "byte": "195", 
+            "frequency": 0, 
+            "strength": 0.9947810789198887
+        }, 
+        {
+            "byte": "196", 
+            "frequency": 0, 
+            "strength": 0.9994685034687875
+        }, 
+        {
+            "byte": "197", 
+            "frequency": 0, 
+            "strength": 0.9996423219970271
+        }, 
+        {
+            "byte": "198", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "199", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "200", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "201", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "202", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "203", 
+            "frequency": 0, 
+            "strength": 0.9999952288576673
+        }, 
+        {
+            "byte": "204", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "205", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "206", 
+            "frequency": 0, 
+            "strength": 0.9987120013329192
+        }, 
+        {
+            "byte": "207", 
+            "frequency": 0, 
+            "strength": 0.9988697418106589
+        }, 
+        {
+            "byte": "208", 
+            "frequency": 0, 
+            "strength": 0.9982677180578893
+        }, 
+        {
+            "byte": "209", 
+            "frequency": 0, 
+            "strength": 0.998551075704189
+        }, 
+        {
+            "byte": "210", 
+            "frequency": 0, 
+            "strength": 0.9999815423949161
+        }, 
+        {
+            "byte": "211", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "212", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "213", 
+            "frequency": 0, 
+            "strength": 0.9999448920187531
+        }, 
+        {
+            "byte": "214", 
+            "frequency": 0, 
+            "strength": 0.9999782474555041
+        }, 
+        {
+            "byte": "215", 
+            "frequency": 0, 
+            "strength": 0.9999532343443459
+        }, 
+        {
+            "byte": "216", 
+            "frequency": 0, 
+            "strength": 0.9997338470908282
+        }, 
+        {
+            "byte": "217", 
+            "frequency": 0, 
+            "strength": 0.9998719100047473
+        }, 
+        {
+            "byte": "218", 
+            "frequency": 0, 
+            "strength": 0.9999907601175082
+        }, 
+        {
+            "byte": "219", 
+            "frequency": 0, 
+            "strength": 0.9999551804203534
+        }, 
+        {
+            "byte": "220", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "221", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "222", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "223", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "224", 
+            "frequency": 0, 
+            "strength": 0.9982299409487657
+        }, 
+        {
+            "byte": "225", 
+            "frequency": 0, 
+            "strength": 0.9993926041495252
+        }, 
+        {
+            "byte": "226", 
+            "frequency": 0, 
+            "strength": 0.996408555030466
+        }, 
+        {
+            "byte": "227", 
+            "frequency": 0, 
+            "strength": 0.9988421745844391
+        }, 
+        {
+            "byte": "228", 
+            "frequency": 0, 
+            "strength": 0.9988999987413887
+        }, 
+        {
+            "byte": "229", 
+            "frequency": 0, 
+            "strength": 0.99848921191334
+        }, 
+        {
+            "byte": "230", 
+            "frequency": 0, 
+            "strength": 0.9984134629782205
+        }, 
+        {
+            "byte": "231", 
+            "frequency": 0, 
+            "strength": 0.9986647865515142
+        }, 
+        {
+            "byte": "232", 
+            "frequency": 0, 
+            "strength": 0.9988187738459611
+        }, 
+        {
+            "byte": "233", 
+            "frequency": 0, 
+            "strength": 0.9990359899607318
+        }, 
+        {
+            "byte": "234", 
+            "frequency": 0, 
+            "strength": 0.9994981994810093
+        }, 
+        {
+            "byte": "235", 
+            "frequency": 0, 
+            "strength": 0.9994367486509548
+        }, 
+        {
+            "byte": "236", 
+            "frequency": 0, 
+            "strength": 0.9994096043826226
+        }, 
+        {
+            "byte": "237", 
+            "frequency": 0, 
+            "strength": 0.9994798318634379
+        }, 
+        {
+            "byte": "238", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "239", 
+            "frequency": 0, 
+            "strength": 0.9995296639717146
+        }, 
+        {
+            "byte": "240", 
+            "frequency": 0, 
+            "strength": 0.9999847859438143
+        }, 
+        {
+            "byte": "241", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "242", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "243", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "244", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "245", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "246", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "247", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "248", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "249", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "250", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "251", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "252", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "253", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "254", 
+            "frequency": 0, 
+            "strength": 1.0
+        }, 
+        {
+            "byte": "255", 
+            "frequency": 0, 
+            "strength": 1.0
+        }
+    ]
+}

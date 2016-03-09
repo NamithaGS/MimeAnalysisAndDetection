@@ -1,0 +1,184 @@
+
+import operator
+import math
+import os
+import json
+import csv
+import sys
+
+if(len(sys.argv)<3):
+    print "Execution = $ python BFC.py <Path to BFA fingerprint file> <Path to directory containing files> "
+    exit()
+    
+# directory where the JSON fingerprint file is stored
+fingerprintfilepath = str(sys.argv[1])
+# path of a specific  file type directory containing the files to be analyzed 
+path = str(sys.argv[2])
+filename = os.path.splitext(os.path.basename(fingerprintfilepath))[0]
+ByteCorrelation={}  # Will store the BFD correlation strengths 
+bytesDict ={} # Will store the byte frequencies for the input file (one at a time)
+crosscorrelation = [] # Will store the cross-correlation matrix for the input file (one at a time)
+crosscorrelation_fp = [] # Will store the cross-correlation fingerprint matrix
+
+#Load the fingerprint from the file
+
+with open(fingerprintfilepath) as data_file:    
+    jsondata = json.load(data_file)["fingerPrint"]
+    fingerPrintBytes = dict((int(i["byte"]),i["frequency"]) for i in jsondata)
+
+#initialize two n*n matrices to store the BFC cross correlation matrix and the corresponding fingerprint
+for x in range(256):
+    row = []
+    for y in range(256):
+        row.append(0)
+    crosscorrelation.append(row)
+
+for x in range(256):
+    row = []
+    for y in range(256):
+        row.append(0)
+    crosscorrelation_fp.append(row)   
+    
+#initialize the matrix to store the BFD correlation strengths
+for i in range(0,256):
+    ByteCorrelation[i]=0
+
+numberOfFiles = 0
+normalfactor = 0
+
+def bytes2int(str):
+ return int(str.encode('hex'), 16)
+
+def correlationfactor(x):
+    #return 1 - x;
+    numerator = -1*x*x
+    denom = 2 * 0.125 * 0.125
+    pow = numerator/denom
+    return math.exp(pow)
+     
+for path, dirs, files in os.walk(path):
+    for file in files:
+        if file in ".DS_Store":
+            continue
+        else:
+            for i in range(0,256):
+                bytesDict[i]=0
+            path_to_file = path+"/"+str(file)
+            filePointer = open(path_to_file,"rb")
+            bytesRead = filePointer.read()
+            for i in range(0,len(bytesRead)):
+                byteStr = bytesRead[i]
+                byte = bytes2int(byteStr)
+                if byte not in bytesDict:
+                    bytesDict[byte]=1
+                else:
+                    bytesDict[byte]+=1
+            
+            # Normal factor
+            normalfactor=max(bytesDict.iteritems(), key=operator.itemgetter(1))[1]
+            # Normalizing The byte frequencies and apply mu-law companding function
+            for key,value in bytesDict.items():
+                newValue=float(value)/normalfactor
+                newValue=math.sqrt(newValue)
+                bytesDict[key]=newValue 
+            #Calculating byte co-relation strengths
+            for key,value in bytesDict.items():
+                newcorrelationfactor = correlationfactor(abs(fingerPrintBytes[key]-bytesDict[key]))
+                newCorrstrength = (ByteCorrelation[key] * numberOfFiles) + newcorrelationfactor
+                newCorrstrength = (newCorrstrength)/(numberOfFiles + 1)
+                ByteCorrelation[key] = newCorrstrength 
+            #Calculate the lower half of the correlation matrix
+            i=0
+            j=0   
+            for j in range(0,254):
+                i=j+1
+                for i in range(j+1,255):
+                    crosscorrelation[i][j] = abs(bytesDict.get(i) - bytesDict.get(j)) 
+                    newFpScore = (abs(crosscorrelation_fp[i][j]) * numberOfFiles) + crosscorrelation[i][j]
+                    newFpScore = (newFpScore)/(numberOfFiles + 1)
+                    crosscorrelation_fp[i][j]= -1.0 * newFpScore
+                    i=i+1
+                j=j+1
+            #Calculate the upper half of the correlation matrix
+            i=0
+            j=0   
+            for i in range(0,254):
+                j=i+1
+                for j in range(i+1,255):
+                    newcorrelationfactor = correlationfactor(abs(crosscorrelation[j][i]-crosscorrelation_fp[j][i]))
+                    newCorrstrength = (crosscorrelation_fp[i][j] * numberOfFiles) + newcorrelationfactor
+                    newCorrstrength = (newCorrstrength)/(numberOfFiles + 1)
+                    crosscorrelation_fp[i][j] = newCorrstrength
+                    j=j+1
+                i=i+1
+                   
+        numberOfFiles+=1
+crosscorrelation_fp[0][0]= numberOfFiles      # Store no. of files at 0,0
+#Create a clone of the ByteCorrelation dictionary which stores pairs of the form (byte value, correlation strength)
+ByteCorrelation_minmax = dict(ByteCorrelation)
+
+#The following code is written to get two maximum and two minimum correlation strengths to plot on the D3js graph.
+#Find the byte with the maximum correlation strength
+BC_max1 =  max(ByteCorrelation_minmax.iterkeys(), key =(lambda key: ByteCorrelation_minmax[key]))
+ByteCorrelation_minmax.pop(BC_max1)
+#Find the byte with the next maximum correlation strength
+BC_max2 =  max(ByteCorrelation_minmax.iterkeys(), key =(lambda key: ByteCorrelation_minmax[key]))
+#Find the byte with the minimum correlation strength
+BC_min1 =  min(ByteCorrelation_minmax.iterkeys(), key =(lambda key: ByteCorrelation_minmax[key]))
+ByteCorrelation_minmax.pop(BC_min1)
+#Find the byte with the next minimum correlation strength
+BC_min2 =  min(ByteCorrelation_minmax.iterkeys(), key =(lambda key: ByteCorrelation_minmax[key]))
+
+# path of the BFC fingerprint file (Required for Graph 1)
+writejsonToFile = open((filename + "-correlation.json"),"w")
+freqList = []
+fingerPrintJson={}
+#Print a json array of the BFC fingerprint 
+for i in range(0,len(fingerPrintBytes)):
+    byteFreq = {}
+    byteFreq["byte"]=str(i)
+    byteFreq["frequency"]=fingerPrintBytes[i]
+    byteFreq["strength"]=ByteCorrelation[i]
+    freqList.append(dict(byteFreq))
+fingerPrintJson["correlation"]=freqList
+
+#Print a json array of two min and two max correlation strengths for each file type
+minmaxList = []
+minmaxitem1 = {}
+minmaxitem1["byte"]=BC_max1
+minmaxitem1["value"]=ByteCorrelation[BC_max1]
+minmaxList.append(dict(minmaxitem1))
+minmaxitem2 = {}
+minmaxitem2["byte"]=BC_max2
+minmaxitem2["value"]=ByteCorrelation[BC_max2]
+minmaxList.append(dict(minmaxitem2))
+minmaxitem3 = {}
+minmaxitem3["byte"]=BC_min1
+minmaxitem3["value"]=ByteCorrelation[BC_min1]
+minmaxList.append(dict(minmaxitem3))
+minmaxitem4 = {}
+minmaxitem4["byte"]=BC_min2
+minmaxitem4["value"]=ByteCorrelation[BC_min2]
+minmaxList.append(dict(minmaxitem4))
+fingerPrintJson["minmax"]=minmaxList
+json.dump(fingerPrintJson,writejsonToFile,indent=4)
+
+#Create the correlation matrix as a CSV file (Required for Graph 2)
+num = 0
+firstrow = []
+firstrow.append('Bytes');
+#First row contains byte value names as a text field of the format b[i]
+while num < 256:
+  firstrow.append('b[' + str(num) + ']')
+  num+=1
+#Print the matrix row by row    
+with open(filename + '-correlationmatrix.csv', 'wb') as csvfile:
+    csvwriter = csv.writer(csvfile, delimiter=',')
+    csvwriter.writerow(firstrow)
+    i=0
+    for list in crosscorrelation_fp: 
+        nextrow = ['b[' + str(i) + ']']
+        for item in list:
+          nextrow.append(item)
+        csvwriter.writerow(nextrow)
+        i+=1 

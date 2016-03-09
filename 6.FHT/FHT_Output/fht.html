@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Correlation Explorer in D3.js</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type='text/javascript' src='http://d3js.org/d3.v3.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="correxplorer.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+</head>
+
+<body>
+
+<h3>File Header Trailer Analysis</h3>
+<div class="btn-group dropdown-grp-mime">
+    <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Select Mime Type<span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="#" identi="0">Text/plain</a></li>
+        <li><a href="#" identi="1">Text/html</a></li>
+        <li><a href="#" identi="2">Image/gif</a></li>
+        <li><a href="#" identi="3">Image/jpeg</a></li>
+        <li><a href="#" identi="4">Image/png</a></li>
+        <li><a href="#" identi="5">Application/pdf</a></li>
+        <li><a href="#" identi="6">Application/octet-stream</a></li>
+        <li><a href="#" identi="7">Application/rtf</a></li>
+        <li><a href="#" identi="8">Application/gzip</a></li>
+        <li><a href="#" identi="9">Image/vnd-microsoft-icon</a></li>
+        <li><a href="#" identi="10">Application/Zip</a></li>
+        <li><a href="#" identi="11">Application/vnd-ms-excel</a></li>
+        <li><a href="#" identi="12">Application/ms-word</a></li>
+        <li><a href="#" identi="13">Audio/mpeg</a></li>
+        <li><a href="#" identi="14">Video/mp4</a></li>
+        <li><a href="#" identi="15">Application/java-vm</a></li>
+        <li><a href="#" identi="16">Application/zlib</a></li>
+        <li><a href="#" identi="17">Application/rss+xml</a></li>
+        <li><a href="#" identi="18">Application/postscript</a></li>
+        <li><a href="#" identi="19">Application/rdf+xml</a></li>
+        <li><a href="#" identi="20">Image/tiff</a></li>
+        <li><a href="#" identi="21">Application/atom+xml</a></li>
+        <li><a href="#" identi="22">Application/vnd-ms-powerpoint</a></li>
+        <li><a href="#" identi="23">Audio/x-ms-wma</a></li>
+        <li><a href="#" identi="24">Video/quicktime</a></li>
+    </ul>
+</div>
+<br>
+<br>
+<input type="text" value="" id="file_path" class="form-control" disabled>
+
+<input type="checkbox" id="transpose">
+<button id="file_load">Load CSV!</button>
+<button id="js_comparison">or generate JS comparison table?</button>
+
+
+<select id="sort_func">
+    <option value="abs_value">by Absolute Value</option>
+    <option value="value" selected="selected">by Value</option>
+    <option value="similarity">by Similarity</option>
+    <option value="alphabetic">Alphabetic</option>
+    <option value="original">Original</option>
+</select>
+
+<input type='checkbox' id="keep_symmetry" checked="true">
+<h4 class="zoomText">Zoom Scale :</h4>
+<input type='text' id="zoom" value="1." class="form-control">
+
+<div id="radioDiv1">
+    <h4> Select Header/Trailer</h4>
+    <label class="radio-inline">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="head" checked> Header
+    </label>
+    <label class="radio-inline">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="tail"> Trailer
+    </label>
+</div>
+
+<div id = "radioDiv2">
+    <h4> Select 4/8/16 bytes matrix </h4>
+    <label class="radio-inline">
+        <input type="radio" name="RadioOptions" id="RadioOptions1" value="4" checked> 4 Bytes
+    </label>
+    <label class="radio-inline">
+        <input type="radio" name="RadioOptions" id="RadioOptions2" value="8"> 8 Bytes
+    </label>
+    <label class="radio-inline">
+        <input type="radio" name="RadioOptions" id="RadioOptions3" value="16"> 16 Bytes
+    </label>
+</div>
+
+
+
+<div class="tooltip" style="opacity: 0.01"></div>
+
+<!-- <p>Built with <a href="http://d3js.org/">d3.js</a>.</p> -->
+
+<script type='text/javascript' src="correxplorer.js"></script>
+<script type="application/javascript">
+    var selection=0;
+    var textHeading;
+    var files = ["text_plain.csv","text_html.csv","image_gif.csv","image_jpg.csv","image_png1.csv","application_pdf.csv","application_octetstream.csv","application_rtf.csv","application_gzip.csv","image_vnd_microsoft_icon.csv","application_zip.csv","application_vnd_ms_excel.csv","application_msword.csv","audio_mpeg.csv","video_mp4.csv","application_java-vm.csv","application_zlib.csv","application_rssXml.csv","application_postscript.csv","application_rdfXml.csv","image_tiff.csv","application_atom+xml.csv","application_vnd.ms-powerpoint.csv","audio_x-ms-wma.csv","video_quicktime.csv"];
+    $("a").click(function () {
+            selection = parseInt($(this).attr("identi"));
+            textHeading = $(this).text();
+            head_trail=$("input[name=inlineRadioOptions]:checked").val();
+            byteSelect = $("input[name=RadioOptions]:checked").val();
+            fileName = head_trail+byteSelect+files[selection];
+            $("#file_path").val("");
+            $("#file_path").val("HeaderFiles/"+fileName);
+            load_all();
+    });
+    $("#sort_func").hide();
+    $("#transpose").hide();
+    $("#keep_symmetry").hide();
+    $("#file_load").hide();
+    $("#js_comparison").hide();
+
+    function loadText(){
+        var svg = d3.select("svg");
+        svg.append("text")
+                .attr("x",120)
+                .attr("y",50)
+                .style("font-size", "26px")
+                .style("fill","grey")
+                .style("font-family","sans-serif")
+                .text(textHeading);
+    }
+
+</script>
+</body>
+
+
+</html>
+

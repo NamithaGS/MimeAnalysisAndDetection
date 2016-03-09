@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Correlation Matrix</title>
+  <h3 align="center">Byte Correlation Matrix</h3>
+  <script type='text/javascript' src='http://d3js.org/d3.v3.min.js'></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type='text/javascript' src="correxplorer.js"></script>
+ 
+  <link rel="stylesheet" type="text/css" href="correxplorer.css">
+
+      <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="btn-group dropdown-grp-mime text-center">
+    <button id="file_load" type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+        Select Mime Type<span class="caret"></span>
+    </button>
+    <ul  id=mimetype class="dropdown-menu">
+        <li><a href="#" identi="0">Text/plain</a></li>
+        <li><a href="#" identi="1">Text/html</a></li>
+        <li><a href="#" identi="2">Image/gif</a></li>
+        <li><a href="#" identi="3">Image/jpeg</a></li>
+        <li><a href="#" identi="4">Audio/mpeg</a></li>
+        <li><a href="#" identi="5">Application/pdf</a></li>
+		<li><a href="#" identi="6">Application/msword</a></li>
+		<li><a href="#" identi="7">Application/vnd-ms-excel</a></li>
+		<li><a href="#" identi="8">Application/Zip</a></li>
+		<li><a href="#" identi="9">Image/tiff</a></li>
+        <li><a href="#" identi="10">Application/octet-stream</a></li>
+        <li><a href="#" identi="11">Audio/x-ms-wma</a></li>
+        <li><a href="#" identi="12">Video/quicktime</a></li>
+		<li><a href="#" identi="13">Application/java-vm</a></li>
+		<li><a href="#" identi="14">Application/vnd-ms-powerpoint</a></li>
+		<li><a href="#" identi="15">Application/postscript</a></li> 
+		<li><a href="#" identi="16">Application/atom+xml</a></li>
+		<li><a href="#" identi="17">Application/rdf+xml</a></li>
+		<li><a href="#" identi="18">Application/rss+xml</a></li>
+    </ul>
+ </div>
+ <h4 class="zoomText">Zoom Scale :</h4>
+<input type='text' id="zoom" value="1" class="form-control">
+<label id="filetype" value="" class="form-control">
+ <div class="tooltip" style="opacity: 0.01"></div>
+
+  <!-- <p>Built with <a href="http://d3js.org/">d3.js</a>.</p> -->
+  
+</body>
+</html>
